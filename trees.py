@@ -21,12 +21,12 @@ def createTree(sz,x,y,color):
     t.begin_fill()
     t.circle(sz)
     t.end_fill()
-def createForest():
-    createMathForest(20)
+def createForest(aot):
+    createMathForest(aot+1)
     for i in range(len(treesXs)-1):       
         createTree(10,treesXs[i+1],treesYs[i+1],"Green")
 
-createForest()
+createForest(int(input("How many trees would you like: ")))
 
 t.hideturtle()
 turtle.exitonclick()
